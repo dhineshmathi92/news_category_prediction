@@ -1,0 +1,99 @@
+<html>
+ <head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Design</title>
+	<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+	<style>
+		.header {
+			background-color: black;
+			text-align: center;
+			color: #ffffff;
+			padding: 10px;
+			background: linear-gradient(45deg, #595861, #883b3b, #6f367d, #2f2828, #2d713e, #778390);
+			animation: change-gradient 10s ease-in-out infinite;
+			background-size: 500% 500%;
+		}
+		.heading_font{
+			color: #c5c0d4;
+			font-family: 'Yatra One', cursive;
+			font-size: 27px;
+		} 
+
+		
+		.section {
+			height: 56vh;
+			text-align: center;
+		}
+		.footer {
+			background-color: black;
+			padding: 20px;
+			background: linear-gradient(45deg, #595861, #883b3b, #6f367d, #2f2828, #2d713e, #778390);
+			animation: change-gradient 10s ease-in-out infinite;
+			background-size: 500% 500%;
+		}
+		@keyframes change-gradient {
+			0%{
+				background-position: 0 50%;
+			}
+			50%{
+				background-position: 100% 50%;
+			}
+			100%{
+				background-position: 0 50%;
+			}
+		}
+		.safe{
+			color: green;
+		}		
+		
+		.contact {
+			margin-top: 0.5pc;
+		    color: #ffffff;
+			text-align: center;
+		}
+		.contact>a>i {
+			color: #ffffff; 
+		}
+		img {
+    		width: 400px;
+    		height: 300px;
+    		margin: 0 auto;
+		}
+	</style>
+ </head>
+ <body>
+	<div class="header">
+		<h2 class='container-heading'><span class="heading_font">News category</span> Analyser</h2>
+		<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+	</div>
+	<div class="section">
+		{% if prediction==0 %}
+			<h1>Prediction: <span class='safe'>Great! This is a POLITICS News Category.</span></h1>
+			<img class="gif" src="{{ url_for('static', filename='politics.gif') }}" alt="Politics category">
+		{% elif prediction==1 %}
+			<h1>Prediction: <span class='safe'>Great! This is a TECHNOLOGY News Category.</span></h1>
+			<img class="gif" src="{{ url_for('static', filename='technology.gif') }}" alt="Technology category">
+			
+		{% elif prediction==2 %}
+			<h1>Prediction: <span class='safe'>Great! This is an ENTERTAINMENT News Category.</span></h1>
+			<img class="gif" src="{{ url_for('static', filename='enter.gif') }}" alt="Entertainment category">
+		{% elif prediction==3 %}
+			<h1>Prediction: <span class='safe'>Great! This is a BUSINESS News Category.</span></h1>
+			<img class="gif" src="{{ url_for('static', filename='business.gif') }}" alt="Business category">	
+			
+			
+		{% endif %}
+	
+	
+	</div>
+	<div class="footer">
+		<div class="contact">
+			<a target="_blank" href="https://github.com/Dhinesh1992/DS_Projects/tree/main/News_category_prediction"><i class="fab fa-github fa-lg contact-icon"></i></a>
+			&nbsp;&nbsp;
+			<a target="_blank" href="https://www.linkedin.com/in/bizdhinesh"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+			<p class='footer-description'>Made with ❤ by Dhinesh M.</p>
+		</div>
+	</div>
+ </body>
+</html>
