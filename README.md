@@ -1,7 +1,7 @@
 # News Category Prediction
 
 This model is designed and developed to predict the category of the news. The categories that this can identify are Politics,  Technology, Entertainment and Business.
-Model is developed and deployed using Flask api. Below is the url where you can predict your news category.
+Model is developed and deployed using Flask api. Below is the url that you can use to try out this.
 
 https://newscategorypredictor.herokuapp.com/
 
