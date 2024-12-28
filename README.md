@@ -1,11 +1,12 @@
 # News Category Prediction
+
 This model is designed and developed to predict the category of the news. The categories that this can identify are Politics,  Technology, Entertainment and Business.
 Model is developed and deployed using Flask api. Below is the url where you can predict your news category.
 
 https://newscategorypredictor.herokuapp.com/
 
 ## Overview
-The **News Category Prediction** project is a machine learning model designed to classify news articles into predefined categories[Politics, Technology, Entertainment and Business] based on their content. This project is hosted online and accessible via the following URL:
+The **News Category Prediction** project is a machine learning model designed to classify news articles into predefined categories based on their content. This project is hosted online and accessible via the following URL:
 [News Category Predictor](https://newscategorypredictor.herokuapp.com/).
 
 ## Features
